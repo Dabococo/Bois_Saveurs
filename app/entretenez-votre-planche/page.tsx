@@ -87,18 +87,18 @@ export default function EntretenezVotrePlanche() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-wood-dark mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-wood-dark mb-4">
               Entretenez votre planche
             </h1>
-            <p className="text-xl text-wood-medium max-w-3xl mx-auto">
+            <p className="text-lg text-wood-medium max-w-3xl mx-auto">
               Un bon entretien est essentiel pour préserver la beauté et la longévité de votre planche en bois. 
               Suivez nos conseils pour garder votre planche en parfait état pendant de nombreuses années.
             </p>
           </motion.div>
 
-          <div className="space-y-12 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {etapes.map((etape, index) => (
               <motion.div
                 key={etape.numero}
@@ -106,33 +106,29 @@ export default function EntretenezVotrePlanche() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg p-8 md:p-10"
+                className="bg-white rounded-lg shadow-lg p-6 aspect-square flex flex-col"
               >
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-wood-dark text-white rounded-full flex items-center justify-center text-2xl font-bold">
-                      {etape.numero}
-                    </div>
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 bg-wood-dark text-white rounded-full flex items-center justify-center text-2xl font-bold">
+                    {etape.numero}
                   </div>
-                  <div className="flex-1">
-                    <h2 className="text-3xl font-bold text-wood-dark mb-4">
-                      {etape.titre}
-                    </h2>
-                    <p className="text-lg text-wood-medium mb-6">
-                      {etape.description}
-                    </p>
-                    <div className="bg-accent-beige/30 rounded-lg p-6">
-                      <h3 className="font-bold text-wood-dark mb-3">Étapes détaillées :</h3>
-                      <ul className="space-y-3">
-                        {etape.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-start text-wood-medium">
-                            <span className="text-accent-green mr-3 mt-1">✓</span>
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                </div>
+                <h2 className="text-xl font-bold text-wood-dark mb-3 text-center">
+                  {etape.titre}
+                </h2>
+                <p className="text-sm text-wood-medium mb-4 flex-grow text-center">
+                  {etape.description}
+                </p>
+                <div className="bg-accent-beige/30 rounded-lg p-4 flex-grow overflow-y-auto">
+                  <h3 className="font-bold text-wood-dark mb-2 text-sm">Étapes :</h3>
+                  <ul className="space-y-2">
+                    {etape.details.map((detail, detailIndex) => (
+                      <li key={detailIndex} className="flex items-start text-wood-medium text-xs">
+                        <span className="text-accent-green mr-2 mt-0.5 flex-shrink-0">✓</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </motion.div>
             ))}
@@ -143,7 +139,7 @@ export default function EntretenezVotrePlanche() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-xl mb-16"
+            className="relative h-48 md:h-64 rounded-lg overflow-hidden shadow-xl mb-8"
           >
             <Image
               src={getImagePath("/images/53-produit-fini.jpg")}
