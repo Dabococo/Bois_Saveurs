@@ -34,7 +34,7 @@ export default function EntretenezVotrePlanche() {
       titre: 'Hydratation régulière',
       description: 'Le bois a besoin d\'être hydraté régulièrement pour conserver sa beauté et sa durabilité.',
       details: [
-        'Appliquez de l\'huile alimentaire (colza, lin, coco) une fois par mois',
+        'Appliquez de l\'huile alimentaire (pépins de raisin, lin) une fois par mois',
         'Laissez pénétrer pendant plusieurs heures',
         'Essuyez l\'excédent avec un chiffon propre',
         'Renouvelez plus souvent si la planche est très utilisée',
@@ -66,20 +66,16 @@ export default function EntretenezVotrePlanche() {
 
   const produits = [
     {
-      nom: 'Huile de lin',
+      nom: 'Huile de pépins de raisin',
       description: 'Idéale pour l\'entretien régulier, nourrit le bois en profondeur',
     },
     {
-      nom: 'Huile de coco',
-      description: 'Alternative naturelle, laisse une odeur agréable',
+      nom: 'Huile de lin',
+      description: 'Alternative naturelle, nourrit et protège le bois efficacement',
     },
     {
       nom: 'Savon de Marseille',
       description: 'Nettoyage doux qui respecte le bois',
-    },
-    {
-      nom: 'Cire d\'abeille',
-      description: 'Pour une protection supplémentaire (optionnel)',
     },
   ];
 
@@ -223,10 +219,10 @@ export default function EntretenezVotrePlanche() {
                 contact@bois-et-saveurs.fr
               </a>
               <a
-                href="tel:+33698220919"
+                href="tel:+33765154965"
                 className="px-6 py-3 bg-white text-wood-dark rounded-lg font-semibold hover:bg-accent-beige transition-colors"
               >
-                +33 6 98 22 09 19
+                +33 7 65 15 49 65
               </a>
             </div>
           </motion.div>
