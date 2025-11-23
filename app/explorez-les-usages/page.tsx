@@ -46,7 +46,7 @@ export default function ExplorezLesUsages() {
             <h1 className="text-5xl md:text-6xl font-bold text-wood-dark mb-6">
               Explorez les usages de votre planche
             </h1>
-            <p className="text-xl text-wood-medium max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Découvrez toutes les façons créatives et pratiques d'utiliser vos planches en bois. 
               De la cuisine à la décoration, les possibilités sont infinies.
             </p>
@@ -86,14 +86,14 @@ export default function ExplorezLesUsages() {
                   <h2 className="text-3xl md:text-4xl font-bold text-wood-dark mb-4">
                     {usage.title}
                   </h2>
-                  <p className="text-lg text-wood-medium mb-6">
+                  <p className="text-lg text-gray-700 mb-6">
                     {usage.description}
                   </p>
                   <div className="bg-accent-beige/30 rounded-lg p-6">
                     <h3 className="font-bold text-wood-dark mb-3">Conseils pratiques :</h3>
                     <ul className="space-y-2">
                       {usage.tips.map((tip, tipIndex) => (
-                        <li key={tipIndex} className="flex items-start text-wood-medium">
+                        <li key={tipIndex} className="flex items-start text-gray-700">
                           <span className="text-accent-green mr-2 mt-1">•</span>
                           <span>{tip}</span>
                         </li>
@@ -119,11 +119,11 @@ export default function ExplorezLesUsages() {
             <h2 className="text-4xl font-bold text-wood-dark mb-6">
               Laissez libre cours à votre créativité
             </h2>
-            <p className="text-lg text-wood-medium mb-6">
+            <p className="text-lg text-gray-700 mb-6">
               Les planches en bois sont polyvalentes et s'adaptent à tous vos besoins. 
               N'hésitez pas à expérimenter et à trouver vos propres usages !
             </p>
-            <p className="text-wood-medium">
+            <p className="text-gray-700">
               Partagez vos créations avec nous sur les réseaux sociaux avec le hashtag 
               <span className="font-semibold text-wood-dark"> #BoisEtSaveurs</span>
             </p>

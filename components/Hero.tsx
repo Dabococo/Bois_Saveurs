@@ -29,7 +29,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl md:text-2xl text-wood-medium mb-8 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto"
         >
           Découvrez l'artisanat français à travers nos planches en bois d'exception
         </motion.p>

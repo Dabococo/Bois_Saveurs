@@ -58,10 +58,10 @@ export default function DecouvrezNosPlanches() {
             <h1 className="text-5xl md:text-6xl font-bold text-wood-dark mb-6">
               Découvrez nos planches
             </h1>
-            <p className="text-xl text-wood-medium max-w-3xl mx-auto mb-4">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-4">
               La planche Bois&Saveurs est élégante et naturelle. Son design unique et authentique est inspiré du Chili.
             </p>
-            <p className="text-lg text-wood-medium max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Le bois est travaillé de manière à suivre la courbe naturelle de ses veines et la forme de son écorce, 
               rendant chaque planche aussi singulière que l'arbre dont elle est issue.
             </p>
@@ -97,7 +97,7 @@ export default function DecouvrezNosPlanches() {
                   <h3 className="text-2xl font-bold text-wood-dark mb-4">
                     {planche.name}
                   </h3>
-                  <p className="text-wood-medium mb-4 leading-relaxed">
+                  <p className="text-gray-700 mb-4 leading-relaxed">
                     {planche.description}
                   </p>
                   
@@ -106,15 +106,15 @@ export default function DecouvrezNosPlanches() {
                     <div className="grid grid-cols-3 gap-2 text-sm">
                       <div>
                         <p className="font-semibold mb-1">Dimensions</p>
-                        <p className="text-wood-light">{planche.dimensions}</p>
+                        <p className="text-white/90">{planche.dimensions}</p>
                       </div>
                       <div>
                         <p className="font-semibold mb-1">Poignées</p>
-                        <p className="text-wood-light">{planche.poignees}</p>
+                        <p className="text-white/90">{planche.poignees}</p>
                       </div>
                       <div>
                         <p className="font-semibold mb-1">Épaisseur</p>
-                        <p className="text-wood-light">{planche.epaisseur}</p>
+                        <p className="text-white/90">{planche.epaisseur}</p>
                       </div>
                     </div>
                   </div>
@@ -123,7 +123,7 @@ export default function DecouvrezNosPlanches() {
                     <h4 className="font-semibold text-wood-dark mb-3">Caractéristiques :</h4>
                     <ul className="space-y-2">
                       {planche.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start text-wood-medium">
+                        <li key={idx} className="flex items-start text-gray-700">
                           <span className="text-accent-green mr-2 mt-1">✓</span>
                           <span>{feature}</span>
                         </li>
@@ -133,7 +133,7 @@ export default function DecouvrezNosPlanches() {
                   {planche.usages && (
                     <div className="bg-accent-beige/30 rounded-lg p-4">
                       <p className="text-sm font-semibold text-wood-dark mb-2">Idéale pour :</p>
-                      <p className="text-wood-medium text-sm">{planche.usages}</p>
+                      <p className="text-gray-700 text-sm">{planche.usages}</p>
                     </div>
                   )}
                 </div>
@@ -155,19 +155,19 @@ export default function DecouvrezNosPlanches() {
             <h2 className="text-4xl font-bold text-wood-dark mb-6">
               Un savoir-faire artisanal
             </h2>
-            <p className="text-lg text-wood-medium mb-4">
+            <p className="text-lg text-gray-700 mb-4">
               <strong>2 modèles de planches</strong> sont commercialisés en boutique et sont disponibles en nous envoyant une demande à :{' '}
-              <a href="mailto:contact@bois-et-saveurs.fr" className="text-wood-dark underline font-semibold hover:text-wood-medium">
+              <a href="mailto:contact@bois-et-saveurs.fr" className="text-wood-dark underline font-semibold hover:text-wood-dark/80">
                 contact@bois-et-saveurs.fr
               </a>
             </p>
-            <p className="text-lg text-wood-medium mb-4">
+            <p className="text-lg text-gray-700 mb-4">
               Sa <strong>grande taille</strong> attire l'attention et donne un <strong>aspect raffiné et original pour le service</strong>.
             </p>
-            <p className="text-lg text-wood-medium mb-4">
+            <p className="text-lg text-gray-700 mb-4">
               C'est également un bel objet qui apporte de l'élégance à votre intérieur.
             </p>
-            <p className="text-lg text-wood-medium mb-8">
+            <p className="text-lg text-gray-700 mb-8">
               La planche Bois&Saveurs <strong>présente vos préparations culinaires</strong> et associe l'<strong>esthétique</strong>, 
               les <strong>saveurs</strong> et l'<strong>expérience gustative</strong>.
             </p>
@@ -175,17 +175,17 @@ export default function DecouvrezNosPlanches() {
               <div className="p-6 bg-white rounded-lg">
                 <div className="text-4xl mb-4">🇫🇷</div>
                 <h3 className="font-bold text-wood-dark mb-2">Made in France</h3>
-                <p className="text-wood-medium">Fabrication artisanale française</p>
+                <p className="text-gray-700">Fabrication artisanale française</p>
               </div>
               <div className="p-6 bg-white rounded-lg">
                 <div className="text-4xl mb-4">🌳</div>
                 <h3 className="font-bold text-wood-dark mb-2">Bois sélectionnés</h3>
-                <p className="text-wood-medium">Matériaux de première qualité</p>
+                <p className="text-gray-700">Matériaux de première qualité</p>
               </div>
               <div className="p-6 bg-white rounded-lg">
                 <div className="text-4xl mb-4">✨</div>
                 <h3 className="font-bold text-wood-dark mb-2">Finitions soignées</h3>
-                <p className="text-wood-medium">Chaque détail compte</p>
+                <p className="text-gray-700">Chaque détail compte</p>
               </div>
             </div>
           </motion.div>

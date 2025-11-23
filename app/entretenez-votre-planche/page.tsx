@@ -92,7 +92,7 @@ export default function EntretenezVotrePlanche() {
             <h1 className="text-4xl md:text-5xl font-bold text-wood-dark mb-4">
               Entretenez votre planche
             </h1>
-            <p className="text-lg text-wood-medium max-w-3xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
               Un bon entretien est essentiel pour préserver la beauté et la longévité de votre planche en bois. 
               Suivez nos conseils pour garder votre planche en parfait état pendant de nombreuses années.
             </p>
@@ -116,14 +116,14 @@ export default function EntretenezVotrePlanche() {
                 <h2 className="text-2xl font-bold text-wood-dark mb-3 text-center">
                   {etape.titre}
                 </h2>
-                <p className="text-base text-wood-medium mb-4 flex-grow text-center">
+                <p className="text-base text-gray-700 mb-4 flex-grow text-center">
                   {etape.description}
                 </p>
                 <div className="bg-accent-beige/30 rounded-lg p-4 flex-grow overflow-y-auto">
                   <h3 className="font-bold text-wood-dark mb-2 text-base">Étapes :</h3>
                   <ul className="space-y-2">
                     {etape.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start text-wood-medium text-sm">
+                      <li key={detailIndex} className="flex items-start text-gray-700 text-sm">
                         <span className="text-accent-green mr-2 mt-0.5 flex-shrink-0">✓</span>
                         <span>{detail}</span>
                       </li>
@@ -184,7 +184,7 @@ export default function EntretenezVotrePlanche() {
                   <h3 className="text-2xl font-bold text-wood-dark mb-2">
                     {produit.nom}
                   </h3>
-                  <p className="text-wood-medium">{produit.description}</p>
+                  <p className="text-gray-700">{produit.description}</p>
                 </motion.div>
               ))}
             </div>

@@ -58,7 +58,7 @@ export default function Header() {
               >
                 <Link
                   href={item.href}
-                  className="text-wood-dark hover:text-wood-medium transition-colors font-medium"
+                  className="text-wood-dark hover:text-wood-dark/80 transition-colors font-medium"
                 >
                   {item.label}
                 </Link>

@@ -15,14 +15,14 @@ export default function Footer() {
         >
           <div>
             <h3 className="text-xl font-bold mb-4">Bois-et-saveurs.fr</h3>
-            <p className="text-wood-light">
+            <p className="text-white/90">
               Votre spécialiste des planches en bois artisanales
             </p>
           </div>
 
           <div>
             <h3 className="text-xl font-bold mb-4">Contact</h3>
-            <div className="space-y-2 text-wood-light">
+            <div className="space-y-2 text-white/90">
               <p>
                 <a href="mailto:contact@bois-et-saveurs.fr" className="hover:text-white transition-colors">
                   contact@bois-et-saveurs.fr
@@ -38,7 +38,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-xl font-bold mb-4">Adresse</h3>
-            <p className="text-wood-light">
+            <p className="text-white/90">
               16 140 Charmé<br />
               France
             </p>
@@ -50,7 +50,7 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-8 pt-8 border-t border-wood-medium text-center text-wood-light"
+          className="mt-8 pt-8 border-t border-white/20 text-center text-white/90"
         >
           <p>© 2025 Bois-et-saveurs.fr. Tous droits réservés.</p>
         </motion.div>
