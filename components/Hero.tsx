@@ -2,13 +2,14 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { BASE_PATH } from '@/lib/constants';
 
 export default function Hero() {
   return (
     <section 
       className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-accent-beige via-white to-wood-light/10"
       style={{
-        backgroundImage: 'url(/images/Page-accueil-v21nov-page5.png)',
+        backgroundImage: `url(${BASE_PATH}/images/Page-accueil-v21nov-page5.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

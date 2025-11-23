@@ -3,13 +3,14 @@
 import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getImagePath } from '@/lib/constants';
 
 export default function ExplorezLesUsages() {
   const usages = [
     {
       title: 'Charcuterie et fromages',
       description: 'Créez de magnifiques plateaux avec charcuteries, fromages, fruits et salades. La planche en bois met en valeur vos préparations et apporte une touche rustique et élégante à votre table.',
-      image: '/images/usage-charcuterie.jpg',
+      image: getImagePath('/images/usage-charcuterie.jpg'),
       tips: [
         'Variez les textures et les couleurs pour un rendu visuel attractif',
         'Disposez les fromages du plus doux au plus fort',
@@ -21,7 +22,7 @@ export default function ExplorezLesUsages() {
     {
       title: 'Présentation de viandes',
       description: 'Votre planche est parfaite pour présenter vos viandes, qu\'elles soient crues ou cuites. Le bois naturel met en valeur la qualité de vos produits et préserve leurs saveurs.',
-      image: '/images/usage-viande.jpg',
+      image: getImagePath('/images/usage-viande.jpg'),
       tips: [
         'Disposez les morceaux de viande avec espacement pour un rendu élégant',
         'Ajoutez des herbes fraîches comme le romarin pour la décoration',

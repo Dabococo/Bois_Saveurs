@@ -3,6 +3,7 @@
 import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getImagePath } from '@/lib/constants';
 
 export default function DecouvrezNosPlanches() {
   const planches = [
@@ -10,7 +11,7 @@ export default function DecouvrezNosPlanches() {
       id: 1,
       name: 'Planche 120cm',
       description: 'Planche longue et élégante, parfaite pour les grandes présentations. Son design unique suit la courbe naturelle du bois, rendant chaque planche aussi singulière que l\'arbre dont elle est issue.',
-      image: '/images/Planche_120cm_1.jpeg',
+      image: getImagePath('/images/Planche_120cm_1.jpeg'),
       dimensions: '120cm x 25cm',
       poignees: '1 poignée',
       epaisseur: '2,5cm',
@@ -28,7 +29,7 @@ export default function DecouvrezNosPlanches() {
       id: 2,
       name: 'Planche 100cm',
       description: 'Planche large et spacieuse, idéale pour les présentations généreuses. Son format rectangulaire offre une grande surface de service tout en conservant l\'authenticité du bois naturel.',
-      image: '/images/Planche_100cm_1.jpeg',
+      image: getImagePath('/images/Planche_100cm_1.jpeg'),
       dimensions: '100cm x 40cm',
       poignees: '2 poignées',
       epaisseur: '2,5cm',

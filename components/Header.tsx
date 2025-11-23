@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { getImagePath } from '@/lib/constants';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
           >
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <Image
-                src="/images/LOGO_BOIS-ET-SAVEURS.png"
+                src={getImagePath("/images/LOGO_BOIS-ET-SAVEURS.png")}
                 alt="Bois-et-saveurs.fr"
                 width={250}
                 height={192}

@@ -3,6 +3,7 @@
 import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { getImagePath } from '@/lib/constants';
 
 export default function EntretenezVotrePlanche() {
   const etapes = [
@@ -149,7 +150,7 @@ export default function EntretenezVotrePlanche() {
             className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-xl mb-16"
           >
             <Image
-              src="/images/53-produit-fini.jpg"
+              src={getImagePath("/images/53-produit-fini.jpg")}
               alt="Entretien de la planche"
               fill
               className="object-cover"

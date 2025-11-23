@@ -5,6 +5,7 @@ import Section from '@/components/Section';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/lib/constants';
 
 export default function Home() {
   const features = [
@@ -74,7 +75,7 @@ export default function Home() {
             className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl"
           >
             <Image
-              src="/images/produit-fini.jpg"
+              src={getImagePath("/images/produit-fini.jpg")}
               alt="Planche en bois artisanale"
               fill
               className="object-cover"
@@ -132,7 +133,7 @@ export default function Home() {
               className="relative h-64 md:h-96 rounded-lg overflow-hidden"
             >
               <Image
-                src="/images/plusieurs_fromages.png"
+                src={getImagePath("/images/plusieurs_fromages.png")}
                 alt="Usages de la planche"
                 fill
                 className="object-cover object-top"
