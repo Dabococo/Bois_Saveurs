@@ -1,65 +1,180 @@
-import Image from "next/image";
+'use client';
+
+import Hero from '@/components/Hero';
+import Section from '@/components/Section';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
+  const features = [
+    {
+      title: 'Artisanat français',
+      description: 'Chaque planche est fabriquée à la main avec passion et savoir-faire',
+      icon: '🪵',
+    },
+    {
+      title: 'Qualité premium',
+      description: 'Sélection rigoureuse des meilleurs bois pour une durabilité exceptionnelle',
+      icon: '⭐',
+    },
+    {
+      title: 'Écologique',
+      description: 'Matériaux naturels et durables, respectueux de l\'environnement',
+      icon: '🌱',
+    },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+      <Hero />
+
+      <Section className="bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-wood-dark mb-4">
+              Bienvenue chez Bois & Saveurs
+            </h2>
+            <p className="text-xl text-wood-medium max-w-3xl mx-auto">
+              Nous créons des planches en bois artisanales qui allient esthétique, 
+              fonctionnalité et durabilité. Chaque pièce est unique et raconte une histoire.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 rounded-lg bg-accent-beige/30 hover:bg-accent-beige/50 transition-colors"
+              >
+                <div className="text-5xl mb-4">{feature.icon}</div>
+                <h3 className="text-2xl font-bold text-wood-dark mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-wood-medium">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-xl"
           >
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/produit-fini.jpg"
+              alt="Planche en bois artisanale"
+              fill
+              className="object-cover"
+              priority
+              onError={(e) => {
+                // Fallback si l'image n'existe pas
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+              }}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 bg-gradient-to-t from-wood-dark/80 to-transparent flex items-end p-8">
+              <div className="text-white">
+                <h3 className="text-3xl font-bold mb-2">Découvrez notre collection</h3>
+                <Link
+                  href="/decouvrez-nos-planches"
+                  className="inline-block mt-4 px-6 py-3 bg-white text-wood-dark rounded-lg font-semibold hover:bg-accent-beige transition-colors"
+                >
+                  Voir toutes nos planches
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </main>
-    </div>
+      </Section>
+
+      <Section className="bg-accent-beige/20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-4xl font-bold text-wood-dark mb-6">
+                Explorez les multiples usages
+              </h2>
+              <p className="text-lg text-wood-medium mb-6">
+                Nos planches en bois ne sont pas seulement esthétiques, elles sont aussi 
+                incroyablement polyvalentes. Découvrez toutes les façons créatives d'utiliser 
+                vos planches en cuisine et au-delà.
+              </p>
+              <Link
+                href="/explorez-les-usages"
+                className="inline-block px-6 py-3 bg-wood-dark text-white rounded-lg font-semibold hover:bg-wood-medium transition-colors"
+              >
+                En savoir plus
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative h-64 md:h-96 rounded-lg overflow-hidden"
+            >
+              <Image
+                src="/images/plusieurs_fromages.png"
+                alt="Usages de la planche"
+                fill
+                className="object-cover object-top"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
+              />
+            </motion.div>
+          </div>
+        </div>
+      </Section>
+
+      <Section className="bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 gap-12 items-center">
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="order-1 md:order-2 flex flex-col items-center justify-center text-center"
+            >
+              <h2 className="text-4xl font-bold text-wood-dark mb-6">
+                Entretenez votre planche
+              </h2>
+              <p className="text-lg text-wood-medium mb-6">
+                Un bon entretien garantit la longévité de votre planche. Apprenez les 
+                meilleures pratiques pour préserver la beauté et la fonctionnalité de 
+                vos planches en bois.
+              </p>
+              <Link
+                href="/entretenez-votre-planche"
+                className="inline-block px-6 py-3 bg-wood-dark text-white rounded-lg font-semibold hover:bg-wood-medium transition-colors"
+              >
+                Conseils d'entretien
+              </Link>
+            </motion.div>
+          </div>
+        </div>
+      </Section>
+    </>
   );
 }

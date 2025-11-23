@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site Bois-et-Saveurs
 
-## Getting Started
+Refonte complète du site [bois-et-saveurs.fr](https://www.bois-et-saveurs.fr) avec Next.js, React, TypeScript et Tailwind CSS.
 
-First, run the development server:
+## 🚀 Technologies utilisées
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Framer Motion** (animations)
+
+## 📦 Installation
+
+```bash
+npm install
+```
+
+## 🏃 Développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Le site sera accessible sur [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🏗️ Build de production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## 📁 Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/
+│   ├── page.tsx                    # Page d'accueil
+│   ├── decouvrez-nos-planches/     # Page catalogue
+│   ├── explorez-les-usages/         # Page usages
+│   ├── entretenez-votre-planche/   # Page entretien
+│   ├── layout.tsx                   # Layout principal
+│   └── globals.css                  # Styles globaux
+├── components/
+│   ├── Header.tsx                   # Navigation
+│   ├── Footer.tsx                   # Pied de page
+│   ├── Hero.tsx                     # Section hero
+│   └── Section.tsx                  # Section animée
+└── public/
+    └── images/                      # Images du site
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🖼️ Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Les images du site original doivent être placées dans le dossier `public/images/`. 
 
-## Deploy on Vercel
+Voir `public/images/README.md` pour la liste complète des images nécessaires.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Fonctionnalités
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- ✅ Design moderne et responsive
+- ✅ Animations fluides avec Framer Motion
+- ✅ Navigation intuitive
+- ✅ Optimisation des images avec Next.js Image
+- ✅ Site statique (SSG)
+- ✅ Palette de couleurs naturelles (bois, beige, verts)
+
+## 📱 Responsive
+
+Le site est entièrement responsive et optimisé pour :
+- Mobile (< 768px)
+- Tablette (768px - 1024px)
+- Desktop (> 1024px)
+
+## 🎨 Palette de couleurs
+
+- **Wood Light**: `#d4a574`
+- **Wood Medium**: `#8b6f47`
+- **Wood Dark**: `#5c4a2f`
+- **Accent Green**: `#6b8e5a`
+- **Accent Beige**: `#e8ddd4`
+
+## 📄 Pages
+
+1. **Accueil** (`/`) - Présentation et navigation
+2. **Découvrez nos planches** (`/decouvrez-nos-planches`) - Catalogue des planches
+3. **Explorez les usages** (`/explorez-les-usages`) - Guide d'utilisation
+4. **Entretenez votre planche** (`/entretenez-votre-planche`) - Conseils d'entretien
+
+## 🔧 Configuration
+
+Le site utilise Tailwind CSS v4 avec configuration dans `app/globals.css` et `tailwind.config.ts`.
